@@ -1,0 +1,260 @@
+.jumbotron {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4, #fbc2eb);
+    color: #ffffff;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-principal {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.jumbotron-p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+body{
+    background-color: #e8e8e8;
+}
+/* Estilo personalizado para la navbar */
+.navbar {
+    background-color: #f5f5f5; /* Color gris muy claro y limpio */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra más suave */
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+/* Estilo para los elementos de la lista */
+.nav-item {
+    margin: 0 12px;
+}
+
+.nav-link {
+    color: #333; /* Texto gris oscuro para buena legibilidad */
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #666; /* Cambio sutil al pasar el cursor */
+}
+
+/* Alineación vertical */
+.navbar-nav {
+    align-items: center;
+}
+
+
+.container-fluid {
+    padding: 10px; /* Ajuste del espacio alrededor */
+}
+
+
+.tabla-estilo{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px; 
+}
+  
+  /* Filas impares - Verde pastel */
+.tabla-estilo tbody tr:nth-child(odd) {
+    background-color: #e8f5e9 !important; 
+}
+  
+  /* Filas pares - Azul pastel */
+.tabla-estilo tbody tr:nth-child(even) {
+    background-color: #e6f7ff !important;
+}
+  
+  /* Encabezado */
+.tabla-estilo thead th {
+    background-color: #f4f4f4 !important;
+    border-color: #ddd !important;
+}
+  
+  /* Hover */
+.tabla-estilo tbody tr:hover {
+    background-color: #f1f1f1 !important;
+}
+  
+  /* Hover en celdas */
+.tabla-estilo td:hover {
+    font-size: 15px;
+    transition: font-size 0.2s ease-in-out;
+}
+
+.formulario-estilo {
+    background-color: #fefefe;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px; 
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.titulo-secundario{
+        font-size: 24px; /* Tamaño adecuado para destacar pero sin dominar */
+        color: #5a5a5a; /* Un gris elegante y profesional */
+        font-weight: 600; /* Semi-negrita para resaltar el texto */
+        text-transform: capitalize; /* Primera letra en mayúscula para un toque refinado */
+        margin: 10px 0; /* Espaciado superior e inferior */
+        border-bottom: 2px solid #77dd77; /* Línea decorativa verde pastel debajo del título */
+        padding-bottom: 5px; /* Espacio entre el texto y la línea decorativa */
+        font-family: 'Segoe UI', sans-serif; /* Tipografía moderna y legible */
+}
+
+.titulo-secundario:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.titulo-terciario{
+        font-size: 20px; /* Tamaño adecuado para un título secundario */
+        color: #5c7afe; /* Azul claro para un aspecto más suave */
+        font-weight: 700; /* Texto en negrita para dar énfasis */
+        text-transform: uppercase; /* Letras en mayúsculas para mayor impacto */
+        letter-spacing: 2px; /* Espaciado entre letras para un toque elegante */
+        margin: 15px 0; /* Espaciado superior e inferior */
+        border-left: 5px solid #77dd77; /* Línea decorativa verde pastel a la izquierda */
+        padding-left: 10px; /* Espacio entre el texto y la línea decorativa */
+        font-family: 'Segoe UI', sans-serif; /* Tipografía moderna y estilizada */ 
+}
+
+.parrafo-estilo{
+    font-size: 16px; /* Tamaño del texto cómodo para lectura */
+    color: #444444; /* Gris oscuro para buena legibilidad */
+    line-height: 1.6; /* Altura de línea amplia para mejorar la lectura */
+    margin: 10px 0; /* Espaciado superior e inferior */
+    font-family: 'Segoe UI', sans-serif; /* Tipografía moderna y profesional */
+    text-align: justify; /* Justifica el texto para un aspecto limpio */
+    padding: 5px; /* Espacio interno opcional para mayor separación */
+}
+
+.lista-ordenada {
+    max-width: 600px; /* Limita el ancho de la lista */
+    margin: 0 auto;   /* Centra horizontalmente el contenedor */
+    padding-left: 0;  /* Elimina el relleno izquierdo */
+}
+
+ol {
+    list-style-position: inside; /* Los números dentro del contenido */
+    padding: 0;                  /* Elimina relleno adicional */
+    margin: 0;                   /* Elimina márgenes adicionales */
+}
+
+ol li {
+    margin: 8px 0;      /* Espaciado vertical entre elementos */
+    padding: 10px;      /* Relleno interno de los elementos */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.lista-desordenada{
+    list-style-type: disc; /* Tipo de viñeta (puedes cambiarlo a 'circle' o 'square') */
+    padding-left: 20px; /* Espaciado izquierdo para las viñetas */
+    font-family: 'Segoe UI', sans-serif; /* Tipografía moderna */
+    font-size: 16px; /* Tamaño del texto */
+    color: #444444; /* Color del texto */
+}
+
+#lista1{
+    margin: 10px 0; /* Espaciado entre los elementos de la lista */
+    line-height: 1.6; /* Espaciado entre líneas para una mejor lectura */
+}
+
+.titulo-cuaternario{
+    color: #5c7afe; 
+    text-transform: uppercase; /* Letras en mayúsculas para mayor impacto */
+    letter-spacing: 2px; /* Espaciado entre letras para un toque elegante */
+    margin: 15px 0;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 700;
+}
+
+
+.serie-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fffaf0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.img-responsive {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Ajustar el tamaño de las imágenes */
+.serie-img {
+    height: 200px; /* Puedes ajustar esta altura según tus necesidades */
+    width: 100%;   /* Para que ocupe todo el ancho del contenedor */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin distorsionarse */
+  }
+  
+  /* Asegurar que los figcaption tengan una altura mínima */
+  .serie-box figcaption {
+    min-height: 50px; /* Ajusta según el espacio que necesites para los títulos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Opcional: Hacer que los bloques sean más consistentes */
+  .serie-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Esto ayuda a que todos los bloques se estiren al mismo tamaño */
+}
+
+/*Tabla de formulario*/
+
+.formulario-estilo {
+  background-color: #fefefe;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.has-error {
+  border: 2px solid red;
+}
+
+/* Estilos de las recomendaciones de series */
+.serie-box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  background-color: #fffaf0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.serie-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.resaltado {
+  background-color: yellow;
+  font-weight: bold;
+}

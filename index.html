@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PixelSeries 📺</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+
+  <!-- Jumbotron -->
+  <header class="jumbotron text-center">
+    <h1 class="text-primary titulo-principal">PixelSeries 📺</h1>
+    <p class="text-info jumbotron-p">El lugar perfecto para encontrar info sobre tus series favoritas</p>
+  </header>
+
+  <!-- Navegación -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">📺 Nuestra Web</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-menu">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Inicio 🏠</a></li>
+          <li><a href="#recomendaciones">Recomendaciones</a></li>
+          <li><a href="#generos">Géneros</a></li>
+          <li><a href="#sobreNosotros">Sobre nosotros</a></li>
+          <li><a href="#formularios">Formularios</a></li>
+        </ul>
+        <form class="navbar-form navbar-right">
+          <input type="text" id="buscador-figcaption" placeholder="Buscar serie..." class="form-control">
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Introducción -->
+  <div class="container">
+    <h2 class="text-success text-center titulo-secundario">¿Te gustan las series? ¿No sabes qué ver ahora?</h2>
+    <p class="text-left parrafo-estilo">Tranquilo, estás en el lugar perfecto. Ya sea que busques una maratón intensa de <strong>drama</strong>, una <strong>comedia ligera</strong> para desconectar o una <strong>joya oculta</strong> que te atrape desde el primer capítulo, aquí encontrarás recomendaciones, guías y novedades que te ayudarán a elegir tu próxima serie favorita. ¡Prepárate para sumergirte en historias que te van a enganchar!</p>
+  </div>
+
+  <!-- Plataformas -->
+  <div class="container">
+    <h3 class="text-warning titulo-terciario">Plataformas en las que puedes visualizar las mejores series</h3>
+    <ul class="list-unstyled lista-desordenada">
+      <li id="lista1">Netflix</li>
+      <li id="lista1">Max</li>
+      <li id="lista1">Disney+</li>
+      <li id="lista1">Prime Video</li>
+      <li id="lista1">Apple TV</li>
+    </ul>
+  </div>
+
+  <!-- Top 10 Series -->
+  <div class="container">
+    <h3 class="text-danger titulo-terciario">TOP 10 SERIES MÁS VISTAS DE LA HISTORIA</h3>
+    <ol class="lista-ordenada">
+      <li>Los vigilantes de la playa</li>
+      <li>Juego de Tronos</li>
+      <li>Friends</li>
+      <li>Los Simpsons</li>
+      <li>Breaking Bad</li>
+      <li>The Walking Dead</li>
+      <li>Stranger Things</li>
+      <li>Better Call Saul</li>
+      <li>Black Mirror</li>
+      <li>Perdidos</li>
+    </ol>
+  </div>
+
+  <!-- Tabla de Series Disponibles -->
+  <section class="container">
+    <h2 class="titulo-secundario">Series Disponibles</h2>
+    <div class="table-responsive">
+      <table id="tabla-entidades" class="tabla-estilo table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Género</th>
+            <th>Puntuación</th>
+            <th>Borrar</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div id="mensaje-error-entidades" class="alert alert-danger text-center" style="display: none;"></div>
+  </section>
+
+  <!-- Recomendaciones de series con imágenes -->
+  <div class="container" id="recomendaciones">
+    <h3 class="text-info titulo-terciario">Nuestras recomendaciones</h3>
+    <div class="row">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <figure class="serie-box">
+          <img src="img/el_juego_del_calamar.jpg" alt="El Juego del Calamar" class="img-responsive serie-img">
+          <figcaption class="text-center">El juego del calamar</figcaption>
+          <a href="https://es.wikipedia.org/wiki/El_juego_del_calamar" target="_blank" class="btn btn-primary w-100" data-name="El juego del calamar">¡Descubre más!</a>
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <figure class="serie-box">
+          <img src="img/gambito_de_dama.jpg" alt="Gambito de dama" class="img-responsive serie-img">
+          <figcaption class="text-center">Gambito de dama</figcaption>
+          <a href="https://es.wikipedia.org/wiki/Gambito_de_dama_(miniserie)" target="_blank" class="btn btn-primary w-100" data-name="Gambito de dama">¡Descubre más!</a>
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <figure class="serie-box">
+          <img src="img/gilmore_girls.jpg" alt="Gilmore Girls" class="img-responsive serie-img">
+          <figcaption class="text-center">Gilmore Girls</figcaption>
+          <a href="https://es.wikipedia.org/wiki/Gilmore_Girls" target="_blank" class="btn btn-primary w-100" data-name="Gilmore Girls">¡Descubre más!</a>
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <figure class="serie-box">
+          <img src="img/hannah_montana.jpg" alt="Hannah Montana" class="img-responsive serie-img">
+          <figcaption class="text-center">Hannah Montana</figcaption>
+          <a href="https://es.wikipedia.org/wiki/Hannah_Montana" target="_blank" class="btn btn-primary w-100" data-name="Hannah Montana">¡Descubre más!</a>
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <figure class="serie-box">
+          <img src="img/la_casa_de_papel.jpg" alt="La casa de papel" class="img-responsive serie-img">
+          <figcaption class="text-center">La casa de papel</figcaption>
+          <a href="https://es.wikipedia.org/wiki/La_casa_de_papel" target="_blank" class="btn btn-primary w-100" data-name="La casa de papel">¡Descubre más!</a>
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <figure class="serie-box">
+          <img src="img/ladybug.jpg" alt="Ladybug" class="img-responsive serie-img">
+          <figcaption class="text-center">Miraculous: Las aventuras de Ladybug y Cat Noir</figcaption>
+          <a href="https://es.wikipedia.org/wiki/Miraculous:_las_aventuras_de_Ladybug" target="_blank" class="btn btn-primary w-100" data-name="Miraculous: Las aventuras de Ladybug y Cat Noir">¡Descubre más!</a>
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <figure class="serie-box">
+          <img src="img/los_bridgerton.jpg" alt="Los Bridgerton" class="img-responsive serie-img">
+          <figcaption class="text-center">Los Bridgerton</figcaption>
+          <a href="https://es.wikipedia.org/wiki/Bridgerton" target="_blank" class="btn btn-primary w-100" data-name="Los Bridgerton">¡Descubre más!</a>
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <figure class="serie-box">
+          <img src="img/moder_family.jpg" alt="Modern Family" class="img-responsive serie-img">
+          <figcaption class="text-center">Modern Family</figcaption>
+          <a href="https://es.wikipedia.org/wiki/Modern_Family" target="_blank" class="btn btn-primary w-100" data-name="Modern Family">¡Descubre más!</a>
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <figure class="serie-box">
+          <img src="img/new_amsterdam.jpg" alt="New Amsterdam" class="img-responsive serie-img">
+          <figcaption class="text-center">New Amsterdam</figcaption>
+          <a href="https://es.wikipedia.org/wiki/New_Amsterdam_(serie_de_televisi%C3%B3n)" target="_blank" class="btn btn-primary w-100" data-name="New Amsterdam">¡Descubre más!</a>
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <figure class="serie-box">
+          <img src="img/stranger_things.jpg" alt="Stranger Things" class="img-responsive serie-img">
+          <figcaption class="text-center">Stranger Things</figcaption>
+          <a href="https://es.wikipedia.org/wiki/Stranger_Things" target="_blank" class="btn btn-primary w-100" data-name="Stranger Things">¡Descubre más!</a>
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <figure class="serie-box">
+          <img src="img/supergirl.png" alt="Supergirl" class="img-responsive serie-img">
+          <figcaption class="text-center">Supergirl</figcaption>
+          <a href="https://es.wikipedia.org/wiki/Supergirl_(serie_de_televisi%C3%B3n)" target="_blank" class="btn btn-primary w-100" data-name="Supergirl">¡Descubre más!</a>
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <figure class="serie-box">
+          <img src="img/the_crown.jpg" alt="The Crown" class="img-responsive serie-img">
+          <figcaption class="text-center">The Crown</figcaption>
+          <a href="https://es.wikipedia.org/wiki/The_Crown_(serie_de_televisi%C3%B3n)" target="_blank" class="btn btn-primary w-100" data-name="The Crown">¡Descubre más!</a>
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <figure class="serie-box">
+          <img src="img/the_fly_attendant.jpg" alt="The Flight Attendant" class="img-responsive serie-img">
+          <figcaption class="text-center">The Flight Attendant</figcaption>
+          <a href="https://es.wikipedia.org/wiki/The_Flight_Attendant" target="_blank" class="btn btn-primary w-100" data-name="The Flight Attendant">¡Descubre más!</a>
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <figure class="serie-box">
+          <img src="img/the_umbrella_academy.jpg" alt="The Umbrella Academy" class="img-responsive serie-img">
+          <figcaption class="text-center">The Umbrella Academy</figcaption>
+          <a href="https://es.wikipedia.org/wiki/The_Umbrella_Academy_(serie_de_televisi%C3%B3n)" target="_blank" class="btn btn-primary w-100" data-name="The Umbrella Academy">¡Descubre más!</a>
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <figure class="serie-box">
+          <img src="img/the_witcher.jpg" alt="The Witcher" class="img-responsive serie-img">
+          <figcaption class="text-center">The Witcher</figcaption>
+          <a href="https://es.wikipedia.org/wiki/The_Witcher_(serie_de_televisi%C3%B3n)" target="_blank" class="btn btn-primary w-100" data-name="The Witcher">¡Descubre más!</a>
+        </figure>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <figure class="serie-box">
+          <img src="img/vis_a_vis.jpg" alt="Vis a vis" class="img-responsive serie-img">
+          <figcaption class="text-center">Vis a vis</figcaption>
+          <a href="https://es.wikipedia.org/wiki/Vis_a_vis_(serie_de_televisi%C3%B3n)" target="_blank" class="btn btn-primary w-100" data-name="Vis a vis">¡Descubre más!</a>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <!-- Formularios -->
+  <div class="container" id="formularios">
+    <h3 class="text-success titulo-terciario">¿Quieres recomendarnos una serie?</h3>
+    <form id="formulario-entidades" class="formulario-estilo">
+      <div class="form-group">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="nombre">Nombre de la serie:</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="genero">Género:</label>
+        <input type="text" id="genero" name="genero" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="puntuacion">Puntuación:</label>
+        <input type="text" id="puntuacion" name="puntuacion" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-success">Enviar recomendación</button>
+    </form>
+  </div>
+
+  <!-- Formulario de contacto -->
+  <div class="container my-5 p-4 bg-light rounded shadow">
+    <h3 class="text-primary mb-4 titulo-terciario">Formulario de Contacto</h3>
+    <form id="formulario-contacto">
+      <div class="form-group">
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto" class="form-control">
+        <span id="error-asunto" style="display: none;" class="text-danger"></span>
+      </div>
+      <div class="form-group">
+        <label for="remitente">Nombre:</label>
+        <input type="text" id="remitente" name="remitente" class="form-control">
+        <span id="error-nombre" style="display: none;" class="text-danger"></span>
+      </div>
+      <div class="form-group">
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" class="form-control">
+        <span id="error-apellidos" style="display: none;" class="text-danger"></span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Tu email">
+        <span id="error-email" class="error-message"></span>
+      </div>
+      <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono" class="form-control">
+        <span id="error-telefono" style="display: none;" class="text-danger"></span>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+
+  <!-- Sobre Nosotros -->
+  <div class="container my-5 p-4 bg-white rounded shadow">
+    <h3 id="sobreNosotros" class="text-warning titulo-terciario">Sobre Nosotros</h3>
+    <p class="mt-3 parrafo-estilo">
+      Somos <strong>Silvia Miguel Martín</strong> y <strong>Jose María Morán Gutiérrez</strong>, estudiantes de segundo de Ingeniería Informática en la Universidad de Valladolid.<br>
+      Actualmente estamos desarrollando esta página web como proyecto final de la asignatura de <em>FTI</em>.
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-light py-3 text-center">
+    <h4 class="text-warning titulo-cuaternario">Contáctanos</h4>
+    <ul class="list-unstyled">
+      <li><strong>Email:</strong> silvia.miguel.martin23@estudiantes.uva.es, <br> josemaria.moran23@estudiantes.uva.es</li>
+      <li><strong>Teléfono:</strong> 123 45 67 89</li>
+      <li><strong>Dirección:</strong> Plaza de la Universidad, 1</li>
+    </ul>
+    <p class="mb-0 mt-3">© 2025 PixelSeries. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
